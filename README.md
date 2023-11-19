@@ -508,9 +508,9 @@ cp /etc/nginx/sites-available/default /etc/nginx/sites-available/lb-jarkom
 
 echo ' 
 upstream php-worker {
-    server 10.41.3.1;
-    server 10.41.3.2;
-    server 10.41.3.3;
+    server 10.41.3.1 weight=8;
+    server 10.41.3.2 weight=4;
+    server 10.41.3.3 weight=1;
 }
 
 server {
